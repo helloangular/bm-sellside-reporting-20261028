@@ -22,7 +22,7 @@ permissions:
 jobs:
   artifact:
     name: Artifact
-    uses: helloangular/helio-client-capacity-20260916/.github/workflows/catalog-build.yml@261c5c6c146d63a334d0e81a5fe96b179a36e270
+    uses: helloangular/helio-client-capacity-20260916/.github/workflows/catalog-build.yml@506db8a2aa635f4b97ad94e4fd957b98bf4f05e1
     with:
       helio_execution_id: ${{ inputs.helio_execution_id || '' }}
       helio_target_environment: ${{ inputs.helio_target_environment || '' }}
@@ -37,7 +37,7 @@ jobs:
     name: Deploy
     needs:
     - artifact
-    uses: helloangular/helio-client-capacity-20260916/.github/workflows/catalog-deploy.yml@261c5c6c146d63a334d0e81a5fe96b179a36e270
+    uses: helloangular/helio-client-capacity-20260916/.github/workflows/catalog-deploy.yml@506db8a2aa635f4b97ad94e4fd957b98bf4f05e1
     with:
       helio_execution_id: ${{ inputs.helio_execution_id || '' }}
       helio_target_environment: ${{ inputs.helio_target_environment || '' }}
